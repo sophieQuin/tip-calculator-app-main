@@ -1,0 +1,289 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    box-sizing: border-box;
+    max-width: 1440px;
+
+    padding: 0px;
+    margin: 0px;
+    background-color: #C5E4E7;
+    font-family: "Space Mono", sans-serif;
+}
+
+/********HEADER********/
+h1 {
+    text-align: center;
+    color: #3D6666;
+    margin-top: 163px;
+}
+
+/********WHITE CONTAINER********/
+.bill-container {
+    background-color: #FFFFFF;
+    max-width: 920px;
+    min-height: 481px;
+    border-radius: 25px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 87.86px;
+    display: flex;
+    padding: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/********BILL CALCULATOR SECTION********/
+.bill-calculator-section {
+    box-sizing: border-box;
+    width: 379px;
+    height: 388px;
+    margin-top: 45px;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+/********BILL INPUT SECTION********/
+
+form {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 32px;
+    
+}
+form input {
+    font-size: 30px;
+    padding: 0;
+    border-left: 0;
+    width: 379px;
+    color: #999;
+    border-radius: 0 7px 7px 0;
+   
+}
+form input:focus{
+    outline: 0;
+}
+input {
+    text-align: end;
+    background-color: #F3F9FA;
+    width: 28%;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid red;
+}
+input#custom {
+    text-align: center;
+}
+
+input[type=text], input[type=number] {
+    border: transparent;
+    font-size: 24px;
+    color: #00474B;
+}
+label{
+    color: #5E7A7D;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+.flex-container-bill {
+    display: flex;
+    justify-content: flex-start;
+    width: 379px;
+}
+
+.flex-container-bill .currency {
+    font-size: 30px;
+    padding: 0 10px 0 20px;
+    color: #9EBBBD;
+    border: 2px solid #FFFFFF;
+    background-color: #F3F9FA;
+    border-right: 0;
+    border-radius: 7px 0 0 7px;
+}
+.tip-selection-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5E7A7D;
+    min-width: 375px;
+    margin-top: 40px;
+    margin-bottom: 14px;
+}
+
+/********BILL KEYBOARD SECTION********/
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 14px;
+    min-width: 315px;
+}
+button.tip {
+    width: 117px;
+    height: 48px;
+    background-color: #00474B;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 24px;
+    border: transparent;
+}
+
+button.tip:hover, button.tip:focus, button {
+    color: #00474B;
+    background-color: #26C2AE;
+    cursor: pointer;
+}
+
+/********DISPLAY SECTION********/
+.display-section {
+    width: 413px;
+    height: 417px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #00474B;
+    border-radius: 15px;
+}
+.grid-container-display-person, .grid-container-display-total{
+    display: grid;
+    width: 333px;
+    height: 71px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+h2 {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: left;
+    width: 100px;
+    margin-bottom: 0px;
+}
+.person {
+    font-size: 13px;
+    font-weight: bold;
+    color: #7F9D9F;
+    margin-top: 0px;
+    width: 100px;
+}
+#tip-amount, #tip-person {
+    font-size: 48px;
+    color: #26C2AE;
+    font-weight: bold;
+    margin-top: 0px;
+    width: 200px;
+    background-color: transparent;
+}
+
+/*********RESET BUTTON********/
+button#reset {
+    background-color: #0D686D;
+    color: #00474B;
+    border: transparent;
+    border-radius: 5px;
+    text-align: center;
+    width: 333px;
+    height: 48px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.reset-section {
+    margin-top: 5%;
+    text-align: center;
+}
+button.reset:hover {
+    cursor: pointer;
+}
+
+/*********MEDIA QUERY********/
+@media screen and (max-device-width: 1024px) {
+    body {
+        overflow: hidden;
+    }
+    h1 {
+        margin-top: 5%;
+    }
+    .bill-container {
+        max-width: 700px;
+        height: 800px;
+        top: 10%;
+    }
+    .display-section {
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-device-width: 500px) and (max-device-height: 915px) {
+    
+    label {
+        margin-top: 0px;
+    }
+    
+    .bill-calculator-section {
+        margin-top: 32px;
+    }
+    form {
+        padding-left: 32px;
+        padding-right: 32px;
+        width: 375px;
+        margin-bottom: 32px;
+    }
+    form input {
+        width: 260px;
+    }
+    button.tip {
+        width: 147px;
+    }
+    input {
+        width: 147px;
+    }
+    .tip-selection-title {
+        padding-left: 32px;
+    }
+    .keyboard {
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-bottom: 32px;
+    }
+    .display-section {
+        width: 327px;
+        height: 257px;
+        margin-top: -20px;
+    }
+    .grid-container-display-person {
+        margin-top: 32px;
+        height: 48px;
+        
+    }
+    .grid-container-display-total {
+        margin-top: 20px;
+        height: 48px;
+    }
+    .amount {
+        font-size: 32px;
+        padding-right: 32px;
+    }
+    .grid-item-display {
+        padding-left: 20px;
+    }
+    button#reset {
+        width: 281px;
+    }
+    #tip-amount, #tip-person {
+        width: 135px;
+        font-size: 32px;
+    }
+}
+@media screen and (max-device-height: 800px) {
+    body {
+        overflow-y: scroll;
+    }
+    
+}

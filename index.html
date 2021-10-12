@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="mystyles.css" rel="stylesheet">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  
+</head>
+<body>
+<h1>SPLI<br>TTER</h1>
+
+<div class="bill-container">
+  <div class="bill-calculator-section">
+    
+    <form id="form" action="" method="">
+      <label for="amount">Bill</label>
+      <div class="flex-container-bill">
+        <span class="currency">£</span>
+        <input id="amount" name="amount" type="text" maxlength="15" value="" placeholder="0.00">
+      </div>
+    </form>
+
+    <div class="tip-selection-title">Select Tip %</div>
+      <div class="keyboard">
+        <button class="tip">5%</button>
+        <button class="tip">10%</button>
+        <button class="tip">15%</button>
+        <button class="tip">25%</button>
+        <button class="tip">50%</button>
+        <input id="custom" name="custom" type="text" maxlength="15" value="" placeholder="Custom" keypress="total">
+    </div>
+
+    <form id="form" action="" method="">
+      <label for="quantity">Number of People</label>
+      <div class="flex-container-bill">
+        <span class="currency"><img src="images/icon-person.svg" alt="icon of a person"> </span>
+        <input id="quantity" name="quantity" type="number" min="1" maxlength="15" value="1">
+      </div>
+    </form>
+
+  </div>
+
+  
+
+  <div class="display-section">
+    <div class="grid-container-display-person">
+      <div class="grid-item-display">
+        <h2>Tip Amount</h2>
+        <p class="person">/ person</p>
+      </div>
+      <div class="grid-item-display">
+        <input type="text" id="tip-amount" value="0.00">
+      </div>
+    </div>
+
+    <div class="grid-container-display-total">
+      <div class="grid-item-display">
+        <h2>Total</h2>
+        <p class="person">/ person</p>
+      </div>
+      <div class="grid-item-display">
+        <input type="text" id="tip-person" value="0.00">
+      </div>
+    </div>
+    <div class="reset-section">
+      <button id="reset">RESET</button>
+    </div>
+  </div>
+
+  
+
+</div>
+  
+  
+  <script src="myscripts.js"></script>
+</body>
+</html>
