@@ -14,11 +14,11 @@ function totalBill (perc) {
     let myBill = document.getElementById('amount').value;
     let people = document.getElementById('quantity').value;
     totalResult = myBill*(1+(perc/100))/people;
-    document.getElementById('tip-person').value = formatNum(parseFloat(totalResult).toFixed(2));
+    document.getElementById('tip-person').value = '£ ' + formatNum(parseFloat(totalResult).toFixed(2));
     resetBtn.style.backgroundColor = '#26C2AE';
     function totalTip (perc) {
         withTips = myBill*perc/100/people;
-       document.getElementById('tip-amount').value = formatNum(parseFloat(withTips).toFixed(2));
+       document.getElementById('tip-amount').value = '£ ' + formatNum(parseFloat(withTips).toFixed(2));
        
     }
     return totalTip(perc);
@@ -30,12 +30,12 @@ function customTipCalc () {
     let myBill = document.getElementById('amount').value;
     let people = document.getElementById('quantity').value;
     totalResult = myBill*(1+(customTip/100))/people;
-    document.getElementById('tip-person').value = formatNum(parseFloat(totalResult).toFixed(2))
+    document.getElementById('tip-person').value = '£ ' + formatNum(parseFloat(totalResult).toFixed(2))
     ;
     resetBtn.style.backgroundColor = '#26C2AE'
 function totalTip () {
     withTips = myBill*customTip/100/people;
-    document.getElementById('tip-amount').value = formatNum(parseFloat(withTips).toFixed(2));
+    document.getElementById('tip-amount').value = '£ ' + formatNum(parseFloat(withTips).toFixed(2));
        
     }
     return totalTip();
